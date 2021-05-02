@@ -64,6 +64,11 @@ class MainFragment : Fragment() {
             //  call launchSignInFlow when authButton is clicked
             launchSignInFlow()
         }
+        binding.settingsBtn.setOnClickListener {
+            val action = MainFragmentDirections.actionMainFragmentToSettingsFragment()
+            findNavController().navigate(action)
+        }
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
